@@ -1,0 +1,596 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #e4e7f0 !important;
+}
+
+.clearbtn {
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding: 0;
+    /*margin: 0px 15px;*/
+    background-image: url('../Images/clean.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.lblError {
+    color: #ff5b25; /*Error label color*/
+}
+
+.col-md-12 p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 5px 0px 0px 0px;
+    margin: 0;
+    float: left;
+}
+
+.btnmaindiv p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #262529;
+    padding: 5px 0px 0px 0px;
+    margin: 0;
+    float: left;
+}
+
+.ErrorLabel {
+    text-align: left;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: #ff5b25;
+}
+
+.maincontentdiv {
+    width: 99%;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.popupheadingmaindiv {
+    padding: 0;
+    margin: 0;
+    background-color: #14262e;
+    overflow: auto;
+}
+
+.popupheadingtext {
+    padding: 8px 10px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    float: left;
+}
+
+.topheader {
+    width: 100%;
+    background-color: #232c3d;
+    padding: 15px;
+}
+
+.SSgridmaindiv {
+    padding: 5px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+
+.SSgridmaindiv1 {
+    padding: 5px;
+    margin: 10px 0px;
+    overflow: auto;
+}
+
+.SSgridheaderbg {
+    background-color: #cdcdcd;
+}
+
+.SSdatehead {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #232c3d;
+    padding: 3px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.SSdateheadDBA {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #31c1f8;
+    letter-spacing: 1px;
+}
+
+.SSdateheadAPP {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #87e44f;
+    letter-spacing: 1px;
+}
+
+.SSdateheadMONI {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #fbbd4d;
+    letter-spacing: 1px;
+}
+
+.SSdateheadINFO {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #8463e5;
+    letter-spacing: 1px;
+}
+
+.SSdateheadDBAsub {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #232c3d;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #cef1fe;
+    letter-spacing: 1px;
+}
+
+.SSdateheadtime a {
+    color: #232c3d;
+}
+
+    .SSdateheadtime a:hover {
+        color: #232c3d;
+    }
+
+.SSdateheadAPPsub {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #232c3d;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #dcfcc9;
+    letter-spacing: 1px;
+}
+
+.SSdateheadMONIsub {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #232c3d;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #ffeac3;
+    letter-spacing: 1px;
+}
+
+.SSdateheadINFOsub {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #232c3d;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #dbd0fc;
+    letter-spacing: 1px;
+}
+
+.SSgridheaderbg1 {
+    background-color: #f1f1f1;
+}
+
+.SSgridheaderbg2 {
+    background-color: #f9f9f9;
+}
+
+.rotate {
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    float: left;
+}
+
+.SSdateheadday {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #232c3d;
+    padding: 5px 15px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-width: 125px;
+}
+
+    .SSdateheadday p {
+        font-family: 'Lato', sans-serif;
+        font-size: 9px;
+        color: #fff;
+        padding: 2px 8px;
+        margin: 0;
+        text-align: center;
+        background-color: #3b3a3f;
+        float: left;
+    }
+
+.SSdateheadtime {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #232c3d;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #f1f1f1;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+.SSdateheadcompoff {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #6034ff;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+.SSdateheadHoliday {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #ff4b49;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+.SSdateheadNH {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #17a2b8;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+.SSdateheadoff {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #00d0bd;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+.buttonmaindiv {
+    padding: 5px 15px;
+    background-color: rgba(72, 102, 114, 0.80);
+    width: 100%;
+    margin: 10px 0px;
+    overflow: auto;
+    text-align: left;
+}
+
+.buttondiv {
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding: 0;
+    margin: 0px 15px;
+}
+
+.lblMessage {
+    color: #27c4ff; /*Error label color*/
+}
+
+.savebtn {
+    width: 30px;
+    height: 30px;
+    float: right;
+    padding: 0;
+    /*margin: 0px 15px;*/
+    background-image: url(../Images/submit.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.popupheadingtext {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    float: left;
+}
+
+.SSdateheadleave {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #ff7043;
+    letter-spacing: 1px;
+    min-width: 109px;
+}
+
+/* 29 may */
+.calcontentmaindiv {
+    padding: 15px;
+    margin: 20px 0px;
+    /*background-color: #fff;*/
+}
+
+.callabel {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #333333;
+    text-transform: capitalize;
+    padding: 0px 0px;
+    transform: scale(1, 0.9);
+}
+
+.inputtextdiv {
+    background-color: #e4e7f0;
+    border-bottom: 1px solid #858585;
+    padding: 3px;
+    margin: 5px 0px 10px 0px;
+    width: 100%;
+}
+
+.calentextbox {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #333333;
+    padding: 0px 0px;
+    background-color: transparent;
+    border: none;
+    width: 98%;
+}
+
+.btnmaindiv {
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    overflow: auto;
+}
+
+.updatebtn {
+    background-color: #ff4b48;
+    border: none;
+    color: #fff;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: default;
+    margin: 0px 0px 0px 10px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    font-size: 13px;
+    float: right;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+.sspace {
+    padding: 20px;
+}
+
+
+.popupmaindiv {
+    position: fixed;
+    top: 25%;
+    left: 38%;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px #888888;
+}
+/*.popupmaindiv{
+     position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+ // border-radius: 3px;
+}*/
+.popupsubdiv {
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.popupclosebtn {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.popupclosebtn1 {
+    padding-right: 1em;
+    margin: 0;
+    text-align: right;
+}
+
+.popupclosebtn a {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: right;
+    position: relative;
+    top: -7px;
+    right: -1px;
+    float: right;
+}
+
+.popupheading {
+    padding: 0px 15px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    color: #000;
+}
+
+.ErrorFocus {
+    border-color: #ff5b25 !important; /*Error box focus color*/
+}
+/* june 5 */
+
+.submitbtn {
+    background-color: #ff4b48;
+    border: none;
+    color: #fff;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: default;
+    margin: 0px 0px 0px 10px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    font-size: 13px;
+    float: right;
+    cursor: pointer;
+}
+
+.cancelbtn {
+    background-color: #878787;
+    border: none;
+    color: #fff;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: default;
+    margin: 0px 0px 0px 10px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    font-size: 13px;
+    float: right;
+    cursor: pointer;
+}
+
+.gridheader {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    background-color: #616161;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.gridsubdes {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    background-color: #f3f6fd;
+    color: #282828;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+    .gridsubdes a {
+        color: #282828;
+        text-decoration: underline;
+    }
+
+        .gridsubdes a:hover {
+            color: #282828;
+            text-decoration: none;
+        }
+
+.gridsubdes1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    background-color: #cacdd6;
+    color: #282828;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+    .gridsubdes1 a {
+        color: #282828;
+        text-decoration: underline;
+    }
+
+        .gridsubdes1 a:hover {
+            color: #282828;
+            text-decoration: none;
+        }
+
+select:focus {
+    outline: none;
+}
