@@ -1,0 +1,101 @@
+
+    function LoadEmpDetails(empId, empname, EmpEmail) {
+        $("#txtEmailId").val(EmpEmail);
+        $("#txtfirstname").val(empname);
+    }
+
+    function LoadDdls(pathUrl, ddlObject, KeyField, ValueField) {
+        $.ajax({
+            url: pathUrl,
+            type: "GET",
+            async: false,
+            success: function (result) {
+
+                var resultVals = $.parseJSON(result);
+
+                if (resultVals["Error"] == undefined || resultVals["Error"] == null) {
+                    for (var i = 0; i < resultVals.length; i++) {
+                        ddlObject.append('<option value=' + resultVals[i][KeyField] + '>' + resultVals[i][ValueField] + '</option>');
+                    }
+                }
+            }
+            ,
+            error: function (err) {
+                //alert(err.statusText);
+            }
+        });
+    }
+    function LoadGrid() {
+        $.ajax({
+            type: "POST",
+            url: "/Registration/LoadUserData",
+            // data: { userName: name, password: password },
+            success: function (response) {
+                var empDetailsList = $.parseJSON(response);
+
+                $('#tblcustomerdetails > tbody').children("tr:gt(0)").remove();
+                if (empDetailsList["Result"] == undefined || empDetailsList["Result"] == null) {
+
+                    var swapRowStyle = true;
+                    for (i = 0; i < empDetailsList.length; i++) {
+
+                        if (swapRowStyle) {
+                            $('#tblcustomerdetails').append("<tr><td class='gridsubdes'><a href='#' onclick='LoadEmpDetails(" + empDetailsList[i].EmpId + ",\"" + empDetailsList[i].EmpName + "\",\"" + empDetailsList[i].EmpEmail + "\");'>" + empDetailsList[i].EmpName +
+                                "</a></td><td class='gridsubdes'>" + empDetailsList[i].EmpEmail + "</td></tr>");
+                            swapRowStyle = false;
+
+                        }
+
+                        else {
+                            $('#tblcustomerdetails').append("<tr><td class='gridsubdes1'><a href='#' onclick='LoadEmpDetails(\"" + empDetailsList[i].EmpName + "\",\"" + empDetailsList[i].EmpEmail + "\");'>" + empDetailsList[i].EmpName +
+                                "</a></td><td class='gridsubdes1'>" + empDetailsList[i].EmpEmail + "</td></tr>");
+
+                            swapRowStyle = true;
+                        }
+                    }
+
+                }
+                else {
+
+                    $('#tblcustomerdetails').append("<tr><td colspan='5' class='gridsubdes'>No Records Found</td></tr>");
+                }
+
+            },
+            failure: function (response) {
+            },
+            error: function (response) {
+            }
+        });
+    }
+    $(document).ready(function () {
+        LoadDdls('/Registration/GetJobType', $('#ddlTask'), 'EmpId', 'JobType');
+        LoadGrid();
+        //btnupdate
+        $("#btnsubmit").click(function () {
+            var txtName = $("#txtfirstname").val();
+            var txtEmailId = $("txtEmailId").val();
+        });
+        $("#btnsubmit").click(function () {
+            var txtName = $("#txtfirstname").val();
+            var txtEmailId = $("txtEmailId").val();
+            var txtPassword = $("txtPassword").val();
+            var jobType = $("#ddlTask option:selected").val();
+            $.ajax({
+                type: "POST",
+                url: "/Registration/UserDataUpdate",
+                data: { name: txtName, mail: txtEmailId, password: txtPassword },
+                success: function (response) {
+                    if (response.id > 0) {
+
+                    }
+                    else {
+                        alert("invalid login");
+                    }
+                },
+                failure: function (response) {
+                },
+                error: function (response) {
+                }
+            });
+        });
+    });
