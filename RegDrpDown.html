@@ -1,4 +1,11 @@
-
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Sample Project</title>
+</head>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
     function LoadEmpDetails(empId, empname, EmpEmail) {
         $("#txtEmailId").val(EmpEmail);
         $("#txtfirstname").val(empname);
@@ -99,3 +106,65 @@
             });
         });
     });
+</script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Styles.css" rel="stylesheet" />
+<div class="container">
+    <div class="calcontentmaindiv">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="callabel"> Name</div>
+                <div class="inputtextdiv" id="divfirstname"><input class="calentextbox" type="text" id="txtfirstname"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="callabel">Email Id</div>
+                <div class="inputtextdiv" id="divEmailId"><input class="calentextbox" type="text" id="txtEmailId"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="etllabel">Job type</div>
+                <div class="inputtextdiv" id="divpname">
+                    <select class="etltextbox" id="ddlTask" onclick="this.setAttribute('value', this.value);">
+                        <option value="">please choose...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4" id="divOuterPassword">
+                <div class="callabel">Password</div>
+                <div class="inputtextdiv" id="divPassword"><input class="calentextbox" type="Password" id="txtPassword"></div>
+            </div>
+            <div class="col-md-4" id="divOuterRePassword">
+                <div class="callabel">Re-Type Password</div>
+                <div class="inputtextdiv" id="divReTypePassword"><input class="calentextbox" type="Password" id="txtReTypePassword"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="sspace"></div>
+            <div class="btnmaindiv">
+                <p id="pvalidateMessage"></p>
+                <button class="cancelbtn" id="btncancel" style="cursor:pointer;">Cancel</button>
+                <button class="submitbtn" id="btnsubmit" style="cursor:pointer;">Submit</button>
+                <button class="updatebtn" id="btnaddNew" style="cursor:pointer;">Add New</button>
+                <button class="updatebtn" id="btnupdate" style="cursor:pointer;">Update</button>
+                <button class="updatebtn" id="btndelete" style="cursor:pointer;">Delete</button>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="SSgridmaindiv">
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblcustomerdetails">
+                <tbody>
+                    <tr>
+                        <td class="gridheader">Employee Name</td>
+                        <td class="gridheader">Email ID</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
